@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Thankyou for regist</h1>
+  <ul>
+    <li>{{ session['name'] }}</li>
+    <li>{{ session['age'] }}</li>
+    <li>{{ session['birthday'] }}</li>
+    <li>{{ session['gender'] }}</li>
+    <li>{{ session['major'] }}</li>
+    <li>{{ session['nationality'] }}</li>
+    <li>{{ session['message'] }}</li>
+  </ul>
+{% endblock %}

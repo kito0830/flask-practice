@@ -1,0 +1,33 @@
+{% extends "base.html" %} 
+{% block content %}
+<h1>サインアップ</h1>
+<form action="{{ url_for('home') }}" method="POST">
+    <div class="">
+        <label for="last_name">名字</label>
+        <input type="text" name="last_name" id="last_name">
+    </div>
+    <div class="">
+        <label for="first_name">名前</label>
+        <input type="text" name="first_name" id="first_name">
+    </div>
+    <div class="">
+        <label for="job">職業</label>
+        <select name="job">
+            <option value="">選択して下さい</option>
+            <option value="会社員">会社員</option>
+            <option value="公務員">公務員</option>
+            <option value="自営業">自営業</option>
+        </select>
+    </div>
+    <div class="">
+        <input type="radio" name="gender" value="男性">男性
+        <input type="radio" name="gender" value="女性">女性
+    </div>
+    <div class="">
+        <textarea name="message" id="" cols="40" rows="3"></textarea>
+    </div>
+    <div class="">
+        <input type="submit" value="送信">
+    </div>
+</form>
+{% endblock %}

@@ -65,5 +65,5 @@ set FLASK_APP=app.py
 
 ### Flaskの実行
 ```
-flask run
+python app.py
 ```

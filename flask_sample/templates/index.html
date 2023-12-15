@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %} Index {% endblock %} 
+{% block content %} 
+{% filter lower %}
+  <h1>Hello From Flask</h1>
+{% endfilter %} 
+  <h1>{{ "Hello From Flask" | lower }}</h1>
+  <p>{{user | default("default")}}</p>
+  <p>{{"Jinjaについてもっと詳しく知りたい人は
+    https://kinsta.com/jp/blog/vscode-extensions/#5-flask-snippets
+    まで" | urlize(target="_blank")}}</p>
+    
+    <img src="{{ url_for('static', filename='img/chara.jpg') }}" alt="">
+{% endblock %}
+
