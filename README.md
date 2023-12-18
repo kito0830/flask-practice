@@ -31,8 +31,14 @@ deactivate
 virtualenv flaskenv
 ```
 ### 仮想環境のアクティベート
+Winの場合
 ```
 flaskenv\Scripts\activate
+```
+
+MAcの場合
+```
+. flaskenv/bin/activate
 ```
 
 ### flaskをインストール
@@ -67,3 +73,36 @@ set FLASK_APP=app.py
 ```
 python app.py
 ```
+
+### データベースとの接続
+・sql-alchemyをインストール
+```
+pip install flask-sqlalchemy
+```
+
+・migrateをインストール
+```
+pip install flask-migrate  
+```
+
+・migrateの実行準備（マイグレートファイルの設定）
+```
+export FLASK_APP=migrate_model.py
+```
+
+```
+flask db init
+```
+
+→migrationsフォルダが作成される
+
+・マイグレーションファイルを作成
+```
+flask db migrate -m "add Person"
+```
+
+マイグレーションを実行
+```
+flask db upgrade
+```
+
