@@ -1,4 +1,4 @@
-from model import db, Person, app
+from models import db, Person, app
 
 with app.app_context():
   db.create_all() # テーブルを作成

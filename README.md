@@ -86,8 +86,14 @@ pip install flask-migrate
 ```
 
 ・migrateの実行準備（マイグレートファイルの設定）
+Macの場合
 ```
 export FLASK_APP=migrate_model.py
+```
+
+Winの場合
+```
+set FLASK_APP=migrate_model.py
 ```
 
 ```
@@ -98,7 +104,7 @@ flask db init
 
 ・マイグレーションファイルを作成
 ```
-flask db migrate -m "add Person"
+flask db migrate -m "first commit"
 ```
 
 マイグレーションを実行
